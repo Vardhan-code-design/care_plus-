@@ -1,11 +1,38 @@
-<div align="center">
+# Care+ Full-Stack Healthcare Platform
+Comprehensive outpatient healthcare ecosystem with Flutter Web/Mobile Frontend, Django REST Framework Backend, and React Vite Web Application.
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+## Project Structure
+- `flutter_app/`: Complete Flutter application in Dart with Material 3 styling
+  - `lib/main.dart`: App entry point with named routes
+  - `lib/models/`: Doctor and Appointment data models
+  - `lib/services/api_service.dart`: Django REST Framework API client
+  - `lib/screens/`: Landing page, Patient Dashboard, Doctor Portal, Admin Portal
+- `django_backend/`: Django REST Framework backend with SQLite database
+  - `api/models.py`: User, DoctorProfile, Appointment, HealthRecord models with double-booking validation
+  - `api/views.py`: Doctor listings with specialty filter, Appointment booking
+  - `careplus/settings.py`: App settings, CORS, SQLite configuration
+- `src/`: React 19 + TypeScript + Tailwind CSS full interactive web application
+  - `src/context/CareContext.tsx`: Full state orchestration & localStorage persistence
+  - `src/components/`: Hero, DoctorCard, BookingModal, VideoConsultationRoom, PatientPortal, DoctorPortal, AdminPortal
 
-  <h1>Built with AI Studio</h2>
+## How to Run Flutter
+```bash
+cd flutter_app
+flutter pub get
+flutter run -d chrome # or flutter run for mobile
+```
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## How to Run Django
+```bash
+cd django_backend
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+## How to Run React
+```bash
+npm install
+npm run dev
+```

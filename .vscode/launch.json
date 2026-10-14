@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "1. Run React Web App (Vite)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "2. Run Flutter App",
+      "type": "dart",
+      "request": "launch",
+      "cwd": "flutter_app",
+      "program": "flutter_app/lib/main.dart"
+    },
+    {
+      "name": "3. Run Django Backend",
+      "type": "python",
+      "request": "launch",
+      "cwd": "/django_backend",
+      "program": "/django_backend/manage.py",
+      "args": [
+        "runserver",
+        "8000"
+      ],
+      "django": true
+    }
+  ]
+}

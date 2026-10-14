@@ -1,0 +1,6 @@
+{
+  "name": "Care+ | Premium Healthcare Platform",
+  "description": "Find top verified doctors, book appointments, join online video consultations, and manage digital health records across Patient, Doctor, and Admin portals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

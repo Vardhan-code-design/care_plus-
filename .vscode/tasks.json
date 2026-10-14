@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install All Dependencies",
+      "type": "shell",
+      "command": "npm install && cd flutter_app && flutter pub get && cd ../django_backend && pip install -r requirements.txt",
+      "group": "build"
+    },
+    {
+      "label": "Run React Dev Server",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
